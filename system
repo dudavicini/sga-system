@@ -1,0 +1,67 @@
+# Lista que armazenara os nomes dos estudantes
+estudantes = []
+
+# Função principal que exibe o menu principal do sistema
+def menu():
+    while True:
+        print("\nMenu Principal")
+        print("1 - Estudantes")
+        print("2 - Professores")
+        print("3 - Disciplinas")
+        print("4 - Turmas")
+        print("5 - Matriculas")
+        print("0 - Sair")
+
+        # Usuario escolhe uma opcao do menu
+        opcao = input("Escolha uma opcao: ")
+
+        # Redireciona para o menu de estudantes
+        if opcao == "1":
+            menu_estudantes()
+        # Para demais opcoes, exibe mensagem de "EM DESENVOLVIMENTO"
+        elif opcao == "2" or opcao == "3" or opcao == "4" or opcao == "5":
+            print("EM DESENVOLVIMENTO")
+        # Encerra o programa
+        elif opcao == "0":
+            print("Saindo do programa...")
+            break
+        # Caso o usuario digite algo invalido
+        else:
+            print("Opcao invalida")
+
+# Funcao com as opcoes relacionadas aos estudantes
+def menu_estudantes():
+    while True:
+        print("\nMenu Estudantes")
+        print("1 - Incluir estudante")
+        print("2 - Listar estudantes")
+        print("3 - Atualizar estudante")
+        print("4 - Excluir estudante")
+        print("0 - Voltar")
+
+        opcao = input("Escolha uma opcao: ")
+
+        # Adiciona um estudante a lista
+        if opcao == "1":
+            nome = input("Digite o nome do estudante: ")
+            estudantes.append(nome)
+            print("Estudante cadastrado!")
+        # Lista todos os estudantes cadastrados
+        elif opcao == "2":
+            if len(estudantes) == 0:
+                print("Nao ha estudantes cadastrados.")
+            else:
+                print("Lista de estudantes:")
+                for nome in estudantes:
+                    print("- " + nome)
+        # As opcoes 3 e 4 ainda nao foram implementadas
+        elif opcao == "3" or opcao == "4":
+            print("EM DESENVOLVIMENTO")
+        # Volta ao menu principal
+        elif opcao == "0":
+            break
+        else:
+            print("Opcao invalida")
+
+# Inicia o sistema chamando o menu principal
+menu()
