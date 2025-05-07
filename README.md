@@ -1,2 +1,2 @@
 # sga-system
-Projeto desenvolvido como atividade acadêmica e tem como objetivo simular a estrutura de um sistema simples de gestão de estudantes, utilizando a linguagem Python.
+Projeto acadêmico desenvolvido em Python para simular um sistema simples de gestão de estudantes, com funcionalidades de cadastro, consulta, atualização e remoção de dados.
